@@ -6,3 +6,11 @@ node_modules/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
+
+# Reporters (generated output)
+/allure-results/
+/allure-report/
+/tta-report/
+
+# Saved session state
+user-session.json
