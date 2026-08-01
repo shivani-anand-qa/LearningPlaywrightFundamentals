@@ -72,7 +72,7 @@ class CustomReporter implements Reporter {
     private config!: FullConfig;
     private startTime: Date = new Date();
     private endTime: Date = new Date();
-    private outputFile: string = 'tta-report/index.html';
+    private outputFile: string = 'Custom-Report Results/index.html';
     private runId: string = '';
     private testStepsMap: Map<string, StepData[]> = new Map();
     private testStartTimeMap: Map<string, number> = new Map();
@@ -84,7 +84,7 @@ class CustomReporter implements Reporter {
     onBegin(config: FullConfig, suite: Suite): void {
         const now = new Date();
         this.runId = `${now.getFullYear()}${String(now.getMonth() + 1).padStart(2, '0')}${String(now.getDate()).padStart(2, '0')}_${String(now.getHours()).padStart(2, '0')}${String(now.getMinutes()).padStart(2, '0')}${String(now.getSeconds()).padStart(2, '0')}`;
-        this.outputFile = `tta-report/report_${this.runId}.html`;
+        this.outputFile = `Custom-Report Results/report_${this.runId}.html`;
         this.config = config;
         this.startTime = new Date();
         const totalTests = suite.allTests().length;
@@ -232,7 +232,7 @@ class CustomReporter implements Reporter {
         for (const attachment of result.attachments) {
             if (attachment.contentType === 'image/png') {
                 const screenshotName = `screenshot_${this.testCounter}_${screenshots.length + 1}.png`;
-                const destPath = path.join('tta-report', 'screenshots', screenshotName);
+                const destPath = path.join('Custom-Report Results', 'screenshots', screenshotName);
                 const destDir = path.dirname(destPath);
                 if (!fs.existsSync(destDir)) {
                     fs.mkdirSync(destDir, { recursive: true });
@@ -254,7 +254,7 @@ class CustomReporter implements Reporter {
 
             if (attachment.contentType === 'video/webm' && attachment.path) {
                 const videoName = `video_${this.testCounter}.webm`;
-                const destPath = path.join('tta-report', 'videos', videoName);
+                const destPath = path.join('Custom-Report Results', 'videos', videoName);
                 const destDir = path.dirname(destPath);
                 if (!fs.existsSync(destDir)) {
                     fs.mkdirSync(destDir, { recursive: true });
@@ -269,7 +269,7 @@ class CustomReporter implements Reporter {
 
             if (attachment.name === 'trace' && attachment.path) {
                 const traceName = `trace_${this.testCounter}.zip`;
-                const destPath = path.join('tta-report', 'traces', traceName);
+                const destPath = path.join('Custom-Report Results', 'traces', traceName);
                 const destDir = path.dirname(destPath);
                 if (!fs.existsSync(destDir)) {
                     fs.mkdirSync(destDir, { recursive: true });
@@ -1288,7 +1288,7 @@ class CustomReporter implements Reporter {
             background: white;
             border-radius: var(--radius);
             box-shadow: var(--shadow-lg);
-            overflow: hidden;
+            overflow-x: auto;
         }
         .test-table {
             width: 100%;

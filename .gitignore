@@ -10,7 +10,7 @@ node_modules/
 # Reporters (generated output)
 /allure-results/
 /allure-report/
-/tta-report/
+/Custom-Report Results/
 
 # Saved session state
 user-session.json
