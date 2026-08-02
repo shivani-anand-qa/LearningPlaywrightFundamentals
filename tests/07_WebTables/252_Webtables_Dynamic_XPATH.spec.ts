@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test'
 import { log } from 'node:console';
 
-test('Basic verify how to handle multiple elements', async ({ page }) => {
+test('Basic verify how to handle WebTables', async ({ page }) => {
 
 
     await page.goto("https://awesomeqa.com/webtable.html");

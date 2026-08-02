@@ -11,7 +11,7 @@ A repository for learning and practicing test automation with [Playwright](https
   - `04_Session_Storage/` — reusing an authenticated session across tests: `247_SessionStorage.spec.ts` is a standalone script (run directly with `node`/`ts-node`, not via the test runner) that logs in once and saves `storageState` to `user-session.json`; `248_TestVWODashboard_NoCustomReport.spec.ts` loads that saved state to skip login
   - `05_Allure_Reporting/` — same saved-session pattern as above, structured with `test.step`/tags/attachments to exercise the Allure and custom HTML reporters
   - `06_Multiple_Element_/` — handling multiple matching elements: filtering a list of links by text vs. targeting one directly via `data-testid`
-  - `07_WebTables/` — reading and iterating HTML tables with dynamic XPath/CSS locators, plus practice specs against login/filter and HR table UIs
+  - `07_WebTables/` — reading and iterating HTML tables with dynamic XPath/CSS locators, filtering rows by text, paginating through multi-page tables (loop-based and helper-function based), plus practice specs against login/filter and HR table UIs
   - `Template.spec.ts` — starter template for new specs
 - `utils/CustomReporter.ts` — custom Playwright reporter that generates a self-contained, filterable HTML report (`Custom-Report Results/`) with per-step screenshots, console logs, video, and trace links
 - `playwright.config.ts` — Playwright configuration (Firefox and WebKit projects currently disabled; Chromium only). Reporters: `line` and the custom reporter above (Allure disabled for now)

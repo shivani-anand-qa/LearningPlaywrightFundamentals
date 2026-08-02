@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 
-test('Verify Element by Filter', async ({ page }) => {
+test('Verify Webtables', async ({ page }) => {
     let url = "https://app.thetestingacademy.com/playwright/multiple_element_filter?email=addasda@adsd.com&password=dasdadasda&remember=yes#login-success";
     let emailId = "shivaniqa1@gmail.com";
     let pass = "test";

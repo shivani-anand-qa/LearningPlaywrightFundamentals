@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 
-test('Verify Element by Filter', async ({ page }) => {
+test('Verify Webtables', async ({ page }) => {
 
     page.goto("https://awesomeqa.com/hr/web/index.php/auth/login");
     //div[@class ='oxd-table-body']//div[contains(text(), 'Terminated')]/parent::div/following-sibling::div[3]/div/button[1]
