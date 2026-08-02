@@ -12,6 +12,7 @@ A repository for learning and practicing test automation with [Playwright](https
   - `05_Allure_Reporting/` — same saved-session pattern as above, structured with `test.step`/tags/attachments to exercise the Allure and custom HTML reporters
   - `06_Multiple_Element_/` — handling multiple matching elements: filtering a list of links by text vs. targeting one directly via `data-testid`
   - `07_WebTables/` — reading and iterating HTML tables with dynamic XPath/CSS locators, filtering rows by text, paginating through multi-page tables (loop-based and helper-function based), plus practice specs against login/filter and HR table UIs
+  - `08_Web_Select_Frames_Iframe/` — dropdown/select handling: `259_Select.spec.ts` uses a native `<select>` via `selectOption`; `260_Custom_dropDown.spec.ts` drives custom (non-native) listbox-style dropdowns via `getByRole('option')`; `261_Advance_Select_Pro.spec.ts` covers a react-select-style widget (single, multi with tag removal, creatable, grouped, and async/searchable selects)
   - `Template.spec.ts` — starter template for new specs
 - `utils/CustomReporter.ts` — custom Playwright reporter that generates a self-contained, filterable HTML report (`Custom-Report Results/`) with per-step screenshots, console logs, video, and trace links
 - `playwright.config.ts` — Playwright configuration (Firefox and WebKit projects currently disabled; Chromium only). Reporters: `line` and the custom reporter above (Allure disabled for now)
