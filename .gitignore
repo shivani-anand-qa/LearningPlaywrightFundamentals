@@ -14,3 +14,9 @@ node_modules/
 
 # Saved session state
 user-session.json
+
+# Editor
+.vscode/
+
+# Ad-hoc debug screenshots written to repo root
+/*.png
