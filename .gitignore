@@ -18,5 +18,8 @@ user-session.json
 # Editor
 .vscode/
 
+# macOS
+.DS_Store
+
 # Ad-hoc debug screenshots written to repo root
 /*.png

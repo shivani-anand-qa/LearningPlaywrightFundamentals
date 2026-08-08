@@ -16,9 +16,10 @@ A repository for learning and practicing test automation with [Playwright](https
   - `09_Frame_Iframe/` — iframe handling with `frameLocator`: single frame (`262_iframe.spec.ts`), a page split into a frameset with multiple named frames (`263_iframeSet.spec.ts`), and nested/chained iframes (`264_Iframe_part2.spec.ts`)
   - `10_Keyboard_Hover_Drag_Drop/` — `page.keyboard`/`page.mouse` APIs, hover, and drag-and-drop: key presses/combinations and screenshots (`265_keyboard.spec.ts`), hover-triggered nav menus (`266_SpiceJet_Hover.spec.ts`, `Task_July22.spec.ts`), `locator.dragTo()` (`267_Drag_Drop.spec.ts`), manual `mouse.move/down/up` drag-and-drop with a documented site-specific workaround (`268_Advance_Drag_Drop.spec.ts`), and right-click context menus (`269_Context_Menu.spec.ts`); `learning.md` has reference notes on both APIs
   - `11_JS_Alerts/` — native `window.alert`/`confirm`/`prompt` dialogs via the `dialog` event (`270_JS.spec.ts`)
+  - `12_Handle_SVG/` — locating and interacting with SVG elements: `271_SVG.spec.ts` clicks an inline SVG search icon on Flipkart and reads back the resulting product titles via XPath
   - `Template.spec.ts` — starter template for new specs
 - `utils/CustomReporter.ts` — custom Playwright reporter that generates a self-contained, filterable HTML report (`Custom-Report Results/`) with per-step screenshots, console logs, video, and trace links
-- `playwright.config.ts` — Playwright configuration (Firefox and WebKit projects currently disabled; Chromium only). Reporters: `line` and the custom reporter above (Allure disabled for now)
+- `playwright.config.ts` — Playwright configuration (Firefox and WebKit projects currently disabled; Chromium only). Runs headed with `viewport: null` and `--window-size=1920,1080` so the page fills the actual browser window; the `chromium` project re-asserts `viewport: null` and clears `deviceScaleFactor` since the `Desktop Chrome` device preset would otherwise override both. Reporters: `line` and the custom reporter above (Allure disabled for now)
 - `tsconfig.json` — enables editor type-checking (Node globals, etc.) for `tests/`, `utils/`, and the config file
 - `package.json` — project dependencies and scripts
 
