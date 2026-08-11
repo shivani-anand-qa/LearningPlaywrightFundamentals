@@ -23,3 +23,6 @@ user-session.json
 
 # Ad-hoc debug screenshots written to repo root
 /*.png
+
+# Downloaded test artifacts
+/output/
