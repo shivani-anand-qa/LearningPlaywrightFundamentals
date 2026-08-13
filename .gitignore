@@ -26,3 +26,6 @@ user-session.json
 
 # Downloaded test artifacts
 /output/
+
+# Ad-hoc failure screenshots (test hooks)
+/out/
