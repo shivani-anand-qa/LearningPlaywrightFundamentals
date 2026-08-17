@@ -1,7 +1,7 @@
 {
   "name": "learningplaywrightfundamentals",
   "version": "1.0.0",
-  "description": "",
+  "description": "A repository for learning and practicing test automation with [Playwright](https://playwright.dev/).",
   "main": "index.js",
   "scripts": {},
   "keywords": [],
@@ -10,7 +10,33 @@
   "type": "commonjs",
   "devDependencies": {
     "@playwright/test": "^1.62.1",
+    "@types/js-yaml": "^4.0.9",
     "@types/node": "^26.1.1",
     "allure-playwright": "^3.10.2"
-  }
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "allure-js-commons": "^3.10.2",
+    "charenc": "^0.0.2",
+    "crypt": "^0.0.2",
+    "exceljs": "^4.4.0",
+    "fsevents": "^2.3.2",
+    "is-buffer": "^1.1.6",
+    "js-yaml": "^5.3.0",
+    "md5": "^2.3.0",
+    "mysql2": "^3.23.3",
+    "playwright": "^1.62.1",
+    "playwright-core": "^1.62.1",
+    "undici-types": "^8.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shivani-anand-qa/LearningPlaywrightFundamentals.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shivani-anand-qa/LearningPlaywrightFundamentals/issues"
+  },
+  "homepage": "https://github.com/shivani-anand-qa/LearningPlaywrightFundamentals#readme"
 }
